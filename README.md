@@ -7,4 +7,4 @@ Each exercice folder is given a serially numbered starting from Exercise 1 to ..
 
 ## List of Exercise Folders
 1. Exercise 1: Setting Up Linux Operating System
-2. Exercise 2:
+2. Exercise 2: 10 More Linux commands and their use cases
