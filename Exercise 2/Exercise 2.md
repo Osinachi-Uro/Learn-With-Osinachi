@@ -5,3 +5,7 @@ Research online for 10 more linux commands aside the ones already mentioned in t
 
 ### Instruction: 
 Submit your work in a folder for this exercise in your altschool-cloud-exercises project. You will need to learn how to embed images in markdown files.
+
+
+# 10 LINUX COMMANDS
+
