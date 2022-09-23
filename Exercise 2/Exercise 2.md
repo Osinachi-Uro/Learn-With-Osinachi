@@ -42,7 +42,8 @@ $ vmstat
 
 
 4. #### Display processor related statistics
-$mpstat
+
+$ mpstat
 
 
 <img width="553" alt="4" src="https://user-images.githubusercontent.com/83463641/191871545-2e9a1545-cac9-4ce4-af87-84623e914031.PNG">
@@ -51,13 +52,15 @@ $mpstat
 5. #### Display CPU information
 
 This command provides a long list of cpu information including processor, vendor, model, core, etc (Image below)
+
 $ cat /proc/cpuinfo
 
 
 <img width="648" alt="5" src="https://user-images.githubusercontent.com/83463641/191871610-ae5c3109-4d94-4654-ac59-72bd80abd4cf.PNG">
 
 
-6. #### Display memory information
+6. #### Display memory information. This command displays the memory infomation of the computer
+
 $ cat /proc/meminfo
 
 
@@ -92,4 +95,4 @@ $hostname -i
 <img width="238" alt="10" src="https://user-images.githubusercontent.com/83463641/191871920-92ee9591-c460-47f0-866f-ad335be8e3dd.PNG">
 
 
-## THE END
+### The End
