@@ -6,9 +6,10 @@ In the repository, i created folders for each exercise given by the instructor, 
 Each exercice folder is given a serially numbered starting from Exercise 1 to ... Below is a list of each exercise folder and content names based on the title of the topic learnt.
 
 ## List and contebt of my Exercise Folders
+
 ### Exercise 1: Setting Up Linux Operating System
 ### Exercise 2: 10 More Linux commands and their use cases
-### Exercise 3
-### Exercise 4
-### Exercise 5
-### Exercise 6
+### Exercise 3: Linux Users and Group Administration
+### Exercise 4: Install PHP 7.4 on your local linux machine using the ppa:ondrej/php package repo
+### Exercise 5: Setting up Github account
+### Exercise 6: Implementation of CIS benchmark for Ubuntu
