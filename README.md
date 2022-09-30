@@ -13,3 +13,7 @@ Each exercice folder is given a serially numbered starting from Exercise 1 to ..
 ### Exercise 4: Install PHP 7.4 on your local linux machine using the ppa:ondrej/php package repo
 ### Exercise 5: Setting up Github account
 ### Exercise 6: Implementation of CIS benchmark for Ubuntu
+### Exercise 7:
+### Exercise 8:
+### Exercise 9:
+### Exercise 10:
