@@ -55,8 +55,13 @@ Number of hosts per subnet is **6**
 **Number of hosts**<br> The number of hosts per subnet in this case is **6**
 
 **Range of IP addresses**<br> 
+Host Minimum: **193.16.20.33**
+Host Maximum: **193.16.20.38** 
 
 **Broadcast IP**<br> Our broadcast IP in this case is **193.16.20.39**
+
+
+### The End
 
 
 
