@@ -4,7 +4,7 @@
 
 ## 193.16.20.35/29
 
-What is the Network IP, number of hosts, range of IP addresses and broadcast IP from this subnet?
+What is the **Network IP, number of hosts, range of IP addresses and broadcast IP** from this subnet?
 
 ### Instruction: 
 Submit all your answer as a markdown file in the folder for this exercise.
@@ -47,6 +47,16 @@ The formula for the number of hosts per subnet is given as **2<sup>m</sup> - 2**
 2<sup>3</sup> - 2 <br>
 8 - 2 = 6 <br>
 Number of hosts per subnet is **6**
+
+## Results
+
+**Network IP:**<br> Our network IP in this case is **193.16.20.32/29**
+
+**Number of hosts**<br> The number of hosts per subnet in this case is **6**
+
+**Range of IP addresses**<br> 
+
+**Broadcast IP**<br> Our broadcast IP in this case is **193.16.20.39**
 
 
 
