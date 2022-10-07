@@ -1,4 +1,4 @@
-# Exercise 9
+# Exercise 9: IP addressing – Netmask
 
 ## Task:
 
@@ -30,14 +30,25 @@ where m = number of bits left to host.
 ```
 A subnet mask of 248 above corresponds to 5 that is number of bits used for subnetting, n.
 With **T<sub>b</sub> = 8 and n = 5**;
-m = 8 - 5
+m = 8 - 5;
 **m = 3** which represents the numer of bits left to host.
 
 ### Step 3 : Calculate the number of subnets 2<sup>n</sup>.
-The number of subnets in our case is: 2<sup>5</sup> = 32
+The number of subnets in our case is: 2<sup>5</sup> = 32.<br>
 The total number of subnets is **32**
 
-### Step 4 : Calculate the value of the last bit used for subnet masking .
-This is represented with the formula (△) = 2<sup>m</sup>; where m = 3
+### Step 4 : Calculate the value of the last bit used for subnet masking.
+This is represented with the formula (△) = 2<sup>m</sup>; where m = 3.<br>
+△ = 2<sup>3</sup> = 8.<br>
+The value of bit used for subnet masking is **8**
+
+### Step 5 : Calculate the number of hosts per subnet.
+The formula for the number of hosts per subnet is given as **2<sup>m</sup> - 2** <br>
+2<sup>3</sup> - 2 <br>
+8 - 2 = 6 <br>
+Number of hosts per subnet is **6**
+
+
+
 
 
