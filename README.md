@@ -3,7 +3,7 @@ I have created this repository to document my learning progress in the AltSchool
 
 In the repository, i created folders for each exercise given by the instructor, Mr Abbakar Siddig Ango from the LMS Cloud Engineering Classes.
 
-Each exercice folder is given a serially numbered starting from Exercise 1 to ... Below is a list of each exercise folder and content names based on the title of the topic learnt.
+Each exercice folder is serially numbered starting from Exercise 1 to ... Below is a list of each exercise folder and content names based on the title of the topic learnt.
 
 ## List and content of each Exercise Folders
 
@@ -14,6 +14,6 @@ Each exercice folder is given a serially numbered starting from Exercise 1 to ..
 ### Exercise 5: Setting up Github account
 ### Exercise 6: Implementation of CIS benchmark for Ubuntu
 ### Exercise 7: Bash Scripting
-### Exercise 8:
-### Exercise 9:
-### Exercise 10:
+### Exercise 8: Ansible
+### Exercise 9: IP Adressing
+
