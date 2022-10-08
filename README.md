@@ -13,7 +13,7 @@ Each exercice folder is serially numbered starting from Exercise 1 to ... Below 
 ### Exercise 4: Install PHP 7.4 on your local linux machine using the ppa:ondrej/php package repo
 ### Exercise 5: Setting up Github account
 ### Exercise 6: Implementation of CIS benchmark for Ubuntu
-### Exercise 7: Bash Scripting
-### Exercise 8: Ansible
-### Exercise 9: IP Adressing
+### Exercise 7: Bash Scripting and Crontab
+### Exercise 8: Configuration Management - Ansible
+### Exercise 9: IP Adressing - Net Mask
 
