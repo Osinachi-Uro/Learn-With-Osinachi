@@ -1,7 +1,5 @@
 # Exercise 1: Setting up VirtualBox and Vagrant
 
-## Brief
-
 ## Task: 
 Setup Ubuntu 20.04 LTS on your local machine using Vagrant
 
