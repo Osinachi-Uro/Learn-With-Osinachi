@@ -67,7 +67,7 @@ Once the machine is up, run ifconfig and share the output in your submission alo
 
 6. Customize my Vagrantfile as necessary with private_network set to dhcp (i used vscode to edit my vagrant file)
 
-<img width="705" alt="DHCP Change" src="https://user-images.githubusercontent.com/83463641/189773492-6cc5c5ad-b39d-4ee0-b115-8e257d397f21.PNG">
+<img width="697" alt="DHCP Change 2" src="https://user-images.githubusercontent.com/83463641/194959660-1dfa9007-6e42-40d0-b370-9536f77010ef.PNG">
 
 7. Then i ran 'ifconfig', it didnt run, i was required to install it using apt-install net-tools in sudo (i didn't screenshot this step as i was immdiatley promted to restart my system)
 
