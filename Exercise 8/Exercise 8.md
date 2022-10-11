@@ -59,12 +59,16 @@ ssh-keygen
 ```
 <img width="660" alt="3  ssh keygen" src="https://user-images.githubusercontent.com/83463641/195213845-4be4edbf-0bcf-4277-b742-b1f9b9c92505.PNG">
 
-#### Step 6: Modify the ssh config file of the target server, in thsi case 'ozizza'
-This action is taken to enable the server allow a connection to it by changing password authetication to yes
+#### Step 6: Modify the ssh config file of the target server, in this case 'ozizza'
+This action is taken to enable the server allow copying of ssh keys by changing password authetication to yes and save
+```
+sudo nano /etc/ssh/sshd-config
+```
 
-
-
-#### Step 1
+#### Step 7: After saving the edited the ssh config file, restart the service using:
+```
+sudo systemctl restart sshd
+```
 
 #### Step 1
 
