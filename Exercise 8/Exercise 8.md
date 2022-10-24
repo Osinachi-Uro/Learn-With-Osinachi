@@ -119,11 +119,69 @@ nano book.yml
 ```
 Write the playbook instruction ans close.
 
-Test to see if ansible is aving a connection with the server and the inventory file
+Let us test our inventory, to see if ansible is having a connection with the server and the inventory file.
+
 ```
-ansible all -i inventory -m ping  # inventory is the name of your host file
+ansible all -i inventory -m ping  
 ```
+Note: "inventory' is the name of your host inventory file
+
 <img width="446" alt="confirm connection" src="https://user-images.githubusercontent.com/83463641/197570527-3bc29630-ee80-4a74-90d3-048f64182f69.PNG">
 
-#### Step 10
+#### Step 10 Let us execute our playbook instructions
+Fisrt we test it by running the following code:
+```
+ansible-playbook book.yml -i inventory --check
+```
+Note: "book.yml' is the name of your playbook file
 
+<img width="599" alt="playbook for apache installation" src="https://user-images.githubusercontent.com/83463641/197580238-0425d103-4b90-49de-803f-283b2d2d0444.PNG">
+
+<img width="836" alt="playbook check" src="https://user-images.githubusercontent.com/83463641/197580264-89c9c850-ea25-4837-93c1-eb5b22c9b40f.PNG">
+
+Everything looks okay, so let us run our playbok
+```
+ansible-playbook book.yml -i inventory
+```
+<img width="845" alt="playbook executed" src="https://user-images.githubusercontent.com/83463641/197581091-9fbf249e-22ab-4c70-9c65-ff80779aca58.PNG">
+
+<img width="509" alt="apache page rendered successfully" src="https://user-images.githubusercontent.com/83463641/197581132-f581a1e0-fa4c-4365-a9f8-3c5dd9bf13b4.PNG">
+
+#### Step 11 Create an index.php file and point it to the IP Address
+
+Creat an index.ph file with the content below:
+```
+sudo nano index.php
+```
+
+```
+<?php
+date_default_timezone_set('Africa/Lagos');
+echo date("F d, Y h:i:s A e", time());
+?>
+```
+
+<img width="690" alt="index-php file" src="https://user-images.githubusercontent.com/83463641/197590080-2014af69-fec0-4785-9d82-30f33215595e.PNG">
+
+#### Step 12 Edit the playbook to include a task for index.php
+
+<img width="657" alt="playbook for php page" src="https://user-images.githubusercontent.com/83463641/197630843-b13a0e4c-6d5a-42ab-a052-f761e99837bc.PNG">
+
+Edit the  by replacing
+
+Execute the playbok command one more time:
+```
+ansible-playbook book.yml -i inventory --check
+```
+<img width="681" alt="checked again without an error" src="https://user-images.githubusercontent.com/83463641/197631977-610c9f92-765c-4381-b5b5-5e75e8b7ae2c.PNG">
+
+Execute it without the check
+```
+ansible-playbook book.yml -i inventory
+```
+<img width="733" alt="executed without the check option" src="https://user-images.githubusercontent.com/83463641/197632232-5d247a47-aed6-41c2-993e-154733f30fce.PNG">
+
+The rendered page will be as shown below.
+
+
+### The End
