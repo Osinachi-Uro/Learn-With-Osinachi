@@ -1,0 +1,23 @@
+---
+- name: Setup Web Server
+  hosts: all
+  become: true
+  become_method: sudo
+
+
+  tasks:
+  - name: Install Apache Server and php
+    apt:
+       name:
+          - apache2
+          - libapache2-mod-php
+       state: present
+
+  - name: set timezone to Africa/Lagos
+    timezone:
+      name: Africa/Lagos
+
+  - name: Host a file
+    copy:
+      src=index.php
+      dest=/var/www/html
