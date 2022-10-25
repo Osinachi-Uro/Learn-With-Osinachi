@@ -165,23 +165,31 @@ echo date("F d, Y h:i:s A e", time());
 
 #### Step 12 Edit the playbook to include a task for index.php
 
-<img width="657" alt="playbook for php page" src="https://user-images.githubusercontent.com/83463641/197630843-b13a0e4c-6d5a-42ab-a052-f761e99837bc.PNG">
-
-Edit the  by replacing
+<img width="921" alt="final playbook" src="https://user-images.githubusercontent.com/83463641/197654153-20bfeb42-cd0a-4968-b908-913c583fff7c.PNG">
 
 Execute the playbok command one more time:
 ```
 ansible-playbook book.yml -i inventory --check
 ```
-<img width="681" alt="checked again without an error" src="https://user-images.githubusercontent.com/83463641/197631977-610c9f92-765c-4381-b5b5-5e75e8b7ae2c.PNG">
+
+<img width="919" alt="playbook check" src="https://user-images.githubusercontent.com/83463641/197653944-4f34c912-6047-455e-b140-9718b655b48c.PNG">
 
 Execute it without the check
 ```
 ansible-playbook book.yml -i inventory
 ```
-<img width="733" alt="executed without the check option" src="https://user-images.githubusercontent.com/83463641/197632232-5d247a47-aed6-41c2-993e-154733f30fce.PNG">
+<img width="840" alt="playbook executed" src="https://user-images.githubusercontent.com/83463641/197653765-06ce1b86-5a71-4288-945f-2685fceb4897.PNG">
 
-The rendered page will be as shown below.
+### Submit
 
+#### Output of systemctl status apache2
+```
+systemctl status apache2
+```
+<img width="621" alt="output of systemctl status apache2" src="https://user-images.githubusercontent.com/83463641/197654648-62ee39db-01e8-4bed-98c9-91fe9f6b44c1.PNG">
+
+#### This is the rendered page shown below.
+
+<img width="233" alt="php page rendered successfully" src="https://user-images.githubusercontent.com/83463641/197655006-e1a4ddc8-c6a6-4d08-a777-197509224d7b.PNG">
 
 ### The End
