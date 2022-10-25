@@ -16,5 +16,5 @@ Each exercice folder is serially numbered starting from Exercise 1 to 10 Below i
 ### Exercise 7: Bash Scripting and Crontab
 ### Exercise 8: Configuration Management - Ansible
 ### Exercise 9: IP Adressing - Net Mask
-### Exercise 10: Deploying a realworld laravel project using LAMP on Debian
+### Exercise 10: Mini Project to Deploying a realworld laravel project using LAMP on Debian
 
