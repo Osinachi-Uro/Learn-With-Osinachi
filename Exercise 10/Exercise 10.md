@@ -169,6 +169,23 @@ mysql_secure_installation
 ```
 Select applicable security settings
 
+##### Create our Database
+
+###### Log into the mysql DB and view available databases:
+```
+mysql -u root -p
+```
+<img width="527" alt="13f  Install MySQL - log into mysql" src="https://user-images.githubusercontent.com/83463641/198087323-6a110bca-7db2-426d-a6d1-ac0470b8a381.PNG">
+```
+show databases;
+```
+<img width="265" alt="13g  show available databases" src="https://user-images.githubusercontent.com/83463641/198116580-1f615727-b9bf-4768-b477-abd90e9b0d8a.PNG">
+
+```
+create database project;
+```
+<img width="287" alt="13h  Create Database" src="https://user-images.githubusercontent.com/83463641/198088631-ac70bab9-fc57-4a9d-9b98-f883ed608fca.PNG">
+
 
 ##### Install PHP
 
@@ -241,6 +258,8 @@ a2dissite 000-default
 <img width="402" alt="15b  restart apache and disable default configuration" src="https://user-images.githubusercontent.com/83463641/198016685-637aabc7-3223-4886-85fd-3ed6eb3d3896.PNG">
 
 
+
+
 ##### Install Composer
 
 Composer is a dependency manager for PHP. Go to https://getcomposer.org/download/ and run the scripts as stated.
@@ -252,7 +271,22 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 ```
 php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 ```
+###### Install Composer
 ```
+composer install
+```
+<img width="947" alt="24 Install Composer" src="https://user-images.githubusercontent.com/83463641/198125235-6fc1f0fe-4921-4b1f-80a6-8142b2a66cd5.PNG">
+
+```
+apt insatll unzip
+```
+<img width="635" alt="25 Install unzip" src="https://user-images.githubusercontent.com/83463641/198125327-fe58d010-6602-46b9-8e5c-2a31c7801aef.PNG">
+
+```
+```
+composer update
+```
+
 php composer-setup.php
 ```
 ```
@@ -279,30 +313,163 @@ apt install git
 git clone https://github.com/f1amy/laravel-realworld-example-app.git
 ```
 
-rename the cloned folder - give it any name you choose
+###### rename the cloned folder - give it any name you choose
 
 ```
 mv laravel-realworld-example-app laravel
 ```
 
+###### Grant all the required file and folder permissions
 
-log into mysql using $ mysql -u root -p; Create a database called 'project' using; create database project; then exit
+<img width="666" alt="18a file permissions" src="https://user-images.githubusercontent.com/83463641/198077961-94a5b2a2-7260-44bc-a2f6-1e28d84bab52.PNG">
 
-7. Download and install composer using: sudo curl -sS https://getcomposer.org/installer | php
-	Next, move the composer file to the /usr/local/bin path using: $ sudo mv composer.phar /usr/local/bin/composer
-	Assign composer execute permission using: $ sudo mv composer.phar /usr/local/bin/composer
-	Verify compser version using: composer --version
-8. Configure and Initialize Git using:git config --global user.name "first last"
-	git config --global user.email "youremail@email.com"
-	cd into /var/www/html and run: sudo git init
-	clone the laravel app folder using: sudo git clone https://github.com/f1amy/laravel-realworld-example-app.git
-	cd into the app folder and rename the .env.example file to .env using: sudo mv .env.example .env
-	edit the .env file as shown.
-	Using composer install the repository by running: sudo composer install
-	verify the installed version using: php artisan
-	Generate a key for the app using: php artisan generate key
-	Then migrate the app using: php artisan migrate
-9. Edit the apache2 config file.
-	create your own config file using: sudo nano laravel.conf
-	Enable the laravel virtual host using: $ sudo a2ensite laravel.conf
-	Restart the Apache web server using: $ sudo systemctl restart apache2
+<img width="597" alt="18b file permissions" src="https://user-images.githubusercontent.com/83463641/198078001-1af1784a-3bcb-434c-9fed-fe38384c83e1.PNG">
+
+<img width="597" alt="18b file permissions" src="https://user-images.githubusercontent.com/83463641/198078355-711ba99b-5175-44b8-b103-21aa439d687a.PNG">
+
+##### Create the Virtual Host Configuration File
+
+```
+nano /etc/apache2/sites-available/laravel.conf
+```
+
+Add this script
+
+```
+<VirtualHost *:80>
+     ServerAdmin admin@domainname.com
+     ServerName domainname.com
+     ServerAlias www.domainname.com
+
+     DocumentRoot /var/www/html/domainname/public
+
+     <Directory /var/www/html/domainname/public>
+         Options Indexes FollowSymLinks
+         AllowOverride All
+         Require all granted
+     </Directory>
+
+     ErrorLog ${APACHE_LOG_DIR}/error.log 
+     CustomLog ${APACHE_LOG_DIR}/access.log combined 
+ </VirtualHost>
+```
+
+<img width="767" alt="19 Edit the host config file" src="https://user-images.githubusercontent.com/83463641/198081028-060711e4-888e-46e0-9dce-8c1607f3fe6e.PNG">
+
+###### Enable the new configuration
+
+```
+a2ensite laravel.conf
+```
+<img width="470" alt="27 Enable the new virtual host config file" src="https://user-images.githubusercontent.com/83463641/198133081-ba33d3fd-f3ce-4344-8d65-b6117c9796f8.PNG">
+
+
+###### .env.example flle to .env and edit the content of .env file
+```
+cp .env.example .env
+```
+<img width="427" alt="20 Change the env-example file" src="https://user-images.githubusercontent.com/83463641/198082133-f23fcb73-787b-4461-9242-20ed04a66ac9.PNG">
+
+```
+nano .env
+```
+
+##### Enable Module Rewrite on Apache2 and restart Apache2:
+```
+a2enmod rewrite
+```
+<img width="408" alt="21 Enable Module rewrite and restart Apache2" src="https://user-images.githubusercontent.com/83463641/198093187-c8e9dafa-d85f-4255-b33b-6932819c665e.PNG">
+
+##### Add HTaccess
+ ```
+ nano .htaccess
+ ```
+ 
+ <img width="647" alt="22 Add  htaccess" src="https://user-images.githubusercontent.com/83463641/198120588-74978eaa-c6c0-41d7-972e-a6a47dc3edc8.PNG">
+
+##### Add Front access by editing the web.php file
+cd into routes directory in the laravel app folder then run:
+```
+nano web.php
+```
+<img width="538" alt="23 edit web dot php file" src="https://user-images.githubusercontent.com/83463641/198120675-a6f6d903-e388-43d1-bcb1-aafc3cd070d6.PNG">
+
+##### Migrate the Database
+```
+composer create-project
+```
+```
+php artisan migrate --seed
+```
+<img width="940" alt="26 php artisan migrate seed" src="https://user-images.githubusercontent.com/83463641/198129726-5e0b3970-26d6-4e31-8dad-067ce3c1e489.PNG">
+
+##### Restart the Apache web server using: 
+```
+systemctl restart apache2
+```
+##### Refresh domain name page to display the Laravel Page: osinachiuro.me
+
+<img width="620" alt="28 Laravel Loading with my domain name" src="https://user-images.githubusercontent.com/83463641/198134402-3f216aeb-ba41-48bb-8e56-b4a0deaa8959.PNG">
+
+#### Activate lets encrypt so we can access the web app vis https
+
+###### Go to Digital ocean and power off the droplet
+###### Take a snapshot of the current state of your server to avoid any data loss when activating lets encrypt
+###### Power the droplet back on then log into the console and run the following commands
+
+Install Let'sEncrypt which generates an SSL certificate for domain names. For this process, we will install Certbot to install Let’sEncrypt SSL using Snap
+
+```
+apt update
+```
+```
+apt install snapd -y
+```
+```
+snap install core
+```
+```
+snap refresh core
+```
+
+###### Install Certbot tool
+
+```
+snap install --classic certbot
+```
+
+###### Configure Certbot to be executable as as a command
+
+```
+ln -s /snap/bin/certbot /usr/bin/certbot
+```
+##### Create an A record in Digital Ocean for the www domain you will use for the next script
+
+```
+certbot --apache --agree-tos --redirect -m youremail@email.com -d domainname.com -d www.domainname.com
+```
+###### SSL Certificate request sucessful
+
+<img width="852" alt="29 ssl cert request successful" src="https://user-images.githubusercontent.com/83463641/198146158-12f0a165-511c-4d7a-8a30-141085812680.PNG">
+
+###### Re-edit .HTaccess file to include https redirect
+```
+nano /var/www/html/laravel/.htaccess
+```
+###### Edit as shown below:
+
+```
+IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+  RewriteCond %{REQUEST_URI} !^/public/
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^(.*)$ /public/$1
+  RewriteRule ^(/)?$ public/index.php [L]
+</IfModule>
+```
