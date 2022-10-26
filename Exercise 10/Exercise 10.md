@@ -1,8 +1,17 @@
-# Exercise 10 - Deploying a Laravel project on Debian 11 operating system 
+# Exercise 10 Semester Project - Deploying a Laravel project on Debian 11 operating system 
 
 ## Brief
-Deploy a Laravel Realworld Example App on debian 11 operating system.
+#### We will be deploying a real life application:
+- Demo Project: https://github.com/f1amy/laravel-realworld-example-app
+- Setup Debian 11 on a virtual machine instance with a cloud provider or as instructed
+- Setup Apache with every dependency the application needs to run
+- Don’t use Laravel Sail or Docker as suggested in the project README file, simple clone the project with Git and deploy with Apache
+- Setup MySQL with credentials and a database for your aplication to use
+- Configure a subdomain if you have a domain name to point the VM instance or speak to an instructor for further guide
+- You have completed the project if you are able to view the application according to the specifications in the project from your Host browser
+- Test your endpoints to confirm your migrations
 
+---
 ### 1. Register a domain name if yu dont already have one
 I used namecheap to register a domain called osinachuro.me
 
