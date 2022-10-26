@@ -9,9 +9,11 @@
 - Setup MySQL with credentials and a database for your aplication to use
 - Configure a subdomain if you have a domain name to point the VM instance or speak to an instructor for further guide
 - You have completed the project if you are able to view the application according to the specifications in the project from your Host browser
-- Test your endpoints to confirm your migrations
+- Test your API endpoints to confirm that they are reachable.
 
 ---
+## Steps
+
 ### 1. Register a domain name if yu dont already have one
 I used namecheap to register a domain called osinachuro.me
 
