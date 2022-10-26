@@ -1,4 +1,4 @@
-# Exercise 10 Semester Project - Deploying a Laravel project on Debian 11 operating system 
+# Exercise 10: Semester Project - Deploying a Laravel project on Debian 11 operating system 
 
 ## Brief
 #### We will be deploying a real life application:
@@ -15,23 +15,24 @@
 ### 1. Register a domain name if yu dont already have one
 I used namecheap to register a domain called osinachuro.me
 
-### Create a virtual server with any of the Cloud service providers
+### 2. Create a virtual server with any of the Cloud service providers
 I used Digital ocean to create a Debian droplet. I used PuttyGen app to generate ssh key for the droplet.
 
  <img width="626" alt="1 Created a Debian Droplet" src="https://user-images.githubusercontent.com/83463641/197918029-106d038f-0c8f-4936-8444-842f5bcbe5e4.PNG">
  
  <img width="464" alt="1b Generated ssh key for my droplet using puttyGen" src="https://user-images.githubusercontent.com/83463641/197919450-71cad398-42f5-439a-ac97-0cdea2e07d7a.PNG">
 
-### Connect the server to the domain name
+### 3. Connect the server to the domain name
 
-First I setup my Custom DNS  by adding the digital Ocean nameserver to my Domain name registrar, Namecheap.
+* First I setup my Custom DNS  by adding the digital Ocean nameserver to my Domain name registrar, Namecheap. *
+
 ![Added Nameserver](https://user-images.githubusercontent.com/83463641/197919582-d9ee268a-9118-4f6c-b416-022d5f198dff.JPG)
 
 Set up A record and host name on Digital Ocean
 
 ![domain name](https://user-images.githubusercontent.com/83463641/197919599-293962de-560b-40cd-9faf-de04b448177f.JPG)
 
-### Set up the Debian Machine with all the necessary installations needed to run a Laravel App
+### 4. Set up the Debian Machine with all the necessary installations needed to run a Laravel App
 
 #### Launch the Digital Ocean Debian droplet terminal
 <img width="532" alt="3 Launch the debian machine to start all the necessary installations" src="https://user-images.githubusercontent.com/83463641/197919878-b042eddc-b342-4024-940e-fd93b08712e2.PNG">
