@@ -1,7 +1,7 @@
 # Exercise 10 - Deploying a Laravel project on Debian 11 operating system 
 
 ## Brief
-Deploy a laravel Realworld Example App on debian 11 operating system ....
+Deploy a Laravel Realworld Example App on debian 11 operating system.
 
 ### 1. Register a domain name if yu dont already have one
 I used namecheap to register a domain called osinachuro.me
@@ -256,9 +256,6 @@ service apache2 restart
 a2dissite 000-default
 ```
 <img width="402" alt="15b  restart apache and disable default configuration" src="https://user-images.githubusercontent.com/83463641/198016685-637aabc7-3223-4886-85fd-3ed6eb3d3896.PNG">
-
-
-
 
 ##### Install Composer
 
