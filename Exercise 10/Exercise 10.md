@@ -488,7 +488,7 @@ nano /var/www/html/laravel/.htaccess
 * Edit as shown below:
 
 ```
-IfModule mod_rewrite.c>
+<IfModule mod_rewrite.c>
   RewriteEngine On
   
   RewriteCond %{HTTPS} off
