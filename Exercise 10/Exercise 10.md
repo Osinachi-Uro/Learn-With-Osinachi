@@ -15,7 +15,7 @@
 ## Steps
 
 ### 1. Register a domain name if yu dont already have one
-* I used namecheap to register a domain called. Here is my [Domain](https://osinachuro.me)
+* I used namecheap to register a domain called. Here is my [Domain](https://osinachiuro.me)
 ---
 
 ### 2. Create a virtual server with any of the Cloud service providers
@@ -503,6 +503,6 @@ IfModule mod_rewrite.c>
 </IfModule>
 ```
 ---
-#### Next is Endpoint testing using browser and Postman. Checck the file: [API Endpoints Testing]()
+#### Next is Endpoint testing using browser and Postman. Checck the file: [API Endpoints Testing](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Exercise%2010/API%20Endpoints%20Testing.md)
 
 #### The End
