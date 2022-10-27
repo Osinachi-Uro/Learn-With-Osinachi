@@ -191,8 +191,9 @@ mysql_secure_installation
 mysql -u root -p
 ```
 <img width="527" alt="13f  Install MySQL - log into mysql" src="https://user-images.githubusercontent.com/83463641/198087323-6a110bca-7db2-426d-a6d1-ac0470b8a381.PNG">
+
 ```
-show databases
+show databases;
 ```
 
 <img width="265" alt="13g  show available databases" src="https://user-images.githubusercontent.com/83463641/198116580-1f615727-b9bf-4768-b477-abd90e9b0d8a.PNG">
