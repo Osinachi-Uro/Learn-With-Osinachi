@@ -503,6 +503,6 @@ IfModule mod_rewrite.c>
 </IfModule>
 ```
 ---
-#### Next is Endpoint testing using browser and Postman. Checck the file: [API Endpoints Testing](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Exercise%2010/API%20Endpoints%20Testing.md)
+#### Next is Endpoint testing using browser and Postman. Checck the page: [API Endpoints Testing](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Exercise%2010/API%20Endpoints%20Testing.md)
 
 #### The End
