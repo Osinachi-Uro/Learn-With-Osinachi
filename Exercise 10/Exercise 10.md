@@ -295,10 +295,12 @@ composer install
 ```
 apt install unzip
 ```
+
 <img width="635" alt="25 Install unzip" src="https://user-images.githubusercontent.com/83463641/198125327-fe58d010-6602-46b9-8e5c-2a31c7801aef.PNG">
 
 ```
 composer update
+```
 ```
 php composer-setup.php
 ```
@@ -313,11 +315,14 @@ php -r "unlink('composer-setup.php');"
 ```
 mv composer.phar /usr/local/bin/composer
 ```
+
 <img width="460" alt="16b  move Composer to a global directory" src="https://user-images.githubusercontent.com/83463641/198020725-6971823c-c36a-4ac2-ad3e-760c95bdeb22.PNG">
+
 
 ##### h. Install Git and Clone the Laravel Apt Repository
 
 * cd into the /var/www/html/ directory to install and initialize git
+
 ```
 apt install git
 ```
@@ -342,6 +347,7 @@ mv laravel-realworld-example-app laravel
 
 <img width="597" alt="18b file permissions" src="https://user-images.githubusercontent.com/83463641/198078355-711ba99b-5175-44b8-b103-21aa439d687a.PNG">
 
+
 ##### i. Create the Virtual Host Configuration File
 
 ```
@@ -352,6 +358,7 @@ nano /etc/apache2/sites-available/laravel.conf
 
 ```
 <VirtualHost *:80>
+
      ServerAdmin admin@domainname.com
      ServerName domainname.com
      ServerAlias www.domainname.com
