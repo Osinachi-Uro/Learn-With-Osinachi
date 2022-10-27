@@ -36,26 +36,26 @@ Set up A record and host name on Digital Ocean
 
 ### 4. Set up the Debian Machine with all the necessary installations needed to run a Laravel App
 
-#### Launch the Digital Ocean Debian droplet terminal
+#### a. Launch the Digital Ocean Debian droplet terminal
 <img width="532" alt="3 Launch the debian machine to start all the necessary installations" src="https://user-images.githubusercontent.com/83463641/197919878-b042eddc-b342-4024-940e-fd93b08712e2.PNG">
 
-The Digital Ocean Debian droplet terminal defaults to the root user
+**Note** The Digital Ocean Debian droplet terminal defaults to the root user
 
-
-#### Setup Apache 
+#### b. Setup Apache 
 	
-##### First update and upgrade the system repositories and all dependencies using the following commands: 
+* First update and upgrade the system repositories and all dependencies using the following commands: 
 ```
-###### apt update
+apt update
 ```
 <img width="680" alt="4a apt update" src="https://user-images.githubusercontent.com/83463641/197920508-bc2fb214-711a-4b11-8795-d0885c06d51b.PNG">
 
 ```
-###### apt upgrade
+apt upgrade
 ```
 <img width="902" alt="4b apt upgrade" src="https://user-images.githubusercontent.com/83463641/197921766-5826b7d7-a804-499e-b40a-ff2ab3e9eb3e.PNG">
 
 ###### When prompted to configure openssh-server, select the option that says "install the package maintainer's version"
+
 <img width="955" alt="4c  Upgrade propmpt - select the package maintenance version" src="https://user-images.githubusercontent.com/83463641/197922073-b9b4ce59-584b-4a6f-a462-07efeb2356b8.PNG">
 
 ###### Install wget package: 
@@ -133,8 +133,7 @@ systemctl status apache2
 
 <img width="498" alt="12  Apache default page displayed" src="https://user-images.githubusercontent.com/83463641/197976297-f2438360-bfce-43c6-9f4a-1157a6078ad2.PNG">
 
-
-#### Setup MySQL
+#### c. Setup MySQL
 
 ###### Add the latest version of the msql apt repository from MySQL APT Repository using this link https://dev.mysql.com/downloads/repo/apt/ The latest version as at this time is 8.24 
 
