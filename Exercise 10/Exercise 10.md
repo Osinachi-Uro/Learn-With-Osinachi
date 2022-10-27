@@ -1,4 +1,4 @@
-# Exercise 10: Semester Project - Deploying a Laravel project on Debian 11 operating system 
+# Exercise 10: 2nd Semester Mini Project - Deploying a Laravel project on Debian 11 operating system 
 
 ## Brief
 #### We will be deploying a real life application:
