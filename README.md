@@ -15,6 +15,6 @@ Each exercice folder is serially numbered starting from Exercise 1 to 10 Below i
 ### Exercise 6: Implementation of CIS benchmark for Ubuntu
 ### Exercise 7: Bash Scripting and Crontab
 ### Exercise 8: Configuration Management - Ansible
-### Exercise 9: IP Adressing - Net Mask
+### Exercise 9: IP Adressing - Net Masking
 ### Exercise 10: Mini Project to Deploying a realworld laravel project using LAMP on Debian
 
