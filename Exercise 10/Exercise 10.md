@@ -509,7 +509,7 @@ nano /var/www/html/laravel/.htaccess
 
 ---
 
-** Speacial Appreciation to [Cloud Booklet](https://www.cloudbooklet.com) for the great article on [How to Install LAMP Apache, MySQL, PHP on Debian 11](https://www.cloudbooklet.com/how-to-install-lamp-apache-mysql-php-on-debian-11/) **
+* Speacial Appreciation to [Cloud Booklet](https://www.cloudbooklet.com) for the great article on [How to Install LAMP Apache, MySQL, PHP on Debian 11](https://www.cloudbooklet.com/how-to-install-lamp-apache-mysql-php-on-debian-11/)
 
 
 #### The End
