@@ -293,7 +293,7 @@ composer install
 <img width="947" alt="24 Install Composer" src="https://user-images.githubusercontent.com/83463641/198125235-6fc1f0fe-4921-4b1f-80a6-8142b2a66cd5.PNG">
 
 ```
-apt insatll unzip
+apt install unzip
 ```
 <img width="635" alt="25 Install unzip" src="https://user-images.githubusercontent.com/83463641/198125327-fe58d010-6602-46b9-8e5c-2a31c7801aef.PNG">
 
@@ -309,24 +309,26 @@ php -r "unlink('composer-setup.php');"
 <img width="945" alt="16  Install Composer" src="https://user-images.githubusercontent.com/83463641/198019153-97b3de5e-5085-4def-bb91-585232ab94c6.PNG">
 
 * Move composer to /usr/local/bin/composer so that it can run globally from anywhere
+
 ```
 mv composer.phar /usr/local/bin/composer
 ```
 <img width="460" alt="16b  move Composer to a global directory" src="https://user-images.githubusercontent.com/83463641/198020725-6971823c-c36a-4ac2-ad3e-760c95bdeb22.PNG">
 
-##### h. Install Git and Clone the Laravel Apa Repository
+##### h. Install Git and Clone the Laravel Apt Repository
 
 * cd into the /var/www/html/ directory to install and initialize git
 ```
 apt install git
 ```
+
 <img width="771" alt="17 install git" src="https://user-images.githubusercontent.com/83463641/198024680-289df6ee-d5ec-4c89-9826-14065f947df8.PNG">
 
 ```
 git clone https://github.com/f1amy/laravel-realworld-example-app.git
 ```
 
-* rename the cloned folder - give it any name you choose
+* Rename the cloned folder - give it any name you choose
 
 ```
 mv laravel-realworld-example-app laravel
@@ -377,6 +379,7 @@ a2ensite laravel.conf
 <img width="470" alt="27 Enable the new virtual host config file" src="https://user-images.githubusercontent.com/83463641/198133081-ba33d3fd-f3ce-4344-8d65-b6117c9796f8.PNG">
 
 * .env.example flle to .env and edit the content of .env file
+
 ```
 cp .env.example .env
 ```
@@ -387,6 +390,7 @@ nano .env
 ```
 
 ##### j. Enable Module Rewrite on Apache2 and restart Apache2:
+
 ```
 a2enmod rewrite
 ```
@@ -397,11 +401,12 @@ a2enmod rewrite
  nano .htaccess
  ```
  
- <img width="647" alt="22 Add  htaccess" src="https://user-images.githubusercontent.com/83463641/198120588-74978eaa-c6c0-41d7-972e-a6a47dc3edc8.PNG">
+<img width="647" alt="22 Add  htaccess" src="https://user-images.githubusercontent.com/83463641/198120588-74978eaa-c6c0-41d7-972e-a6a47dc3edc8.PNG">
 
 ##### l. Add Front access by editing the web.php file
 
 * cd into routes directory in the laravel app folder then run:
+
 ```
 nano web.php
 ```
