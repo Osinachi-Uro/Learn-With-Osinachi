@@ -15,10 +15,10 @@
 ## Steps
 
 ### 1. Register a domain name if yu dont already have one
-I used namecheap to register a domain called osinachuro.me
+* I used namecheap to register a domain called osinachuro.me
 
 ### 2. Create a virtual server with any of the Cloud service providers
-I used Digital ocean to create a Debian droplet. I used PuttyGen app to generate ssh key for the droplet.
+* I used Digital ocean to create a Debian droplet. I used PuttyGen app to generate ssh key for the droplet.
 
  <img width="626" alt="1 Created a Debian Droplet" src="https://user-images.githubusercontent.com/83463641/197918029-106d038f-0c8f-4936-8444-842f5bcbe5e4.PNG">
  
