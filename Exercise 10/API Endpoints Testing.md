@@ -69,6 +69,25 @@ osinachiuro.me/api/articles
 ---
 
 ### 5. Testing endppoints with Postman
+* Get Request
+```
+https://osinachiuro.me/api/articles
+```
+<img width="635" alt="32a Postman - get" src="https://user-images.githubusercontent.com/83463641/198165191-3839a97b-4374-4083-9cf3-5a1b98c2e723.PNG">
 
 
+* Put Request
+```
+https://osinachiuro.me/api/articles/
+```
+<img width="638" alt="32c Postman - put" src="https://user-images.githubusercontent.com/83463641/198164925-bad572a3-2440-4b4f-868b-68eba7504d09.PNG">
 
+
+* Post Request
+```
+https://osinachiuro.me/_ignition/execute-solution
+```
+<img width="634" alt="32b Postman - post" src="https://user-images.githubusercontent.com/83463641/198164761-5f7c12b7-1a93-47c2-aac8-a35dd41239f5.PNG">
+
+
+### The End
