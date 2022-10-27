@@ -314,7 +314,7 @@ mv composer.phar /usr/local/bin/composer
 ```
 <img width="460" alt="16b  move Composer to a global directory" src="https://user-images.githubusercontent.com/83463641/198020725-6971823c-c36a-4ac2-ad3e-760c95bdeb22.PNG">
 
-##### g. Install Git and Clone the Laravel Apa Repository
+##### h. Install Git and Clone the Laravel Apa Repository
 
 * cd into the /var/www/html/ directory to install and initialize git
 ```
@@ -340,7 +340,7 @@ mv laravel-realworld-example-app laravel
 
 <img width="597" alt="18b file permissions" src="https://user-images.githubusercontent.com/83463641/198078355-711ba99b-5175-44b8-b103-21aa439d687a.PNG">
 
-##### h. Create the Virtual Host Configuration File
+##### i. Create the Virtual Host Configuration File
 
 ```
 nano /etc/apache2/sites-available/laravel.conf
@@ -386,20 +386,20 @@ cp .env.example .env
 nano .env
 ```
 
-##### i. Enable Module Rewrite on Apache2 and restart Apache2:
+##### j. Enable Module Rewrite on Apache2 and restart Apache2:
 ```
 a2enmod rewrite
 ```
 <img width="408" alt="21 Enable Module rewrite and restart Apache2" src="https://user-images.githubusercontent.com/83463641/198093187-c8e9dafa-d85f-4255-b33b-6932819c665e.PNG">
 
-##### j. Add HTaccess
+##### k. Add HTaccess
  ```
  nano .htaccess
  ```
  
  <img width="647" alt="22 Add  htaccess" src="https://user-images.githubusercontent.com/83463641/198120588-74978eaa-c6c0-41d7-972e-a6a47dc3edc8.PNG">
 
-##### k. Add Front access by editing the web.php file
+##### l. Add Front access by editing the web.php file
 
 * cd into routes directory in the laravel app folder then run:
 ```
@@ -407,7 +407,7 @@ nano web.php
 ```
 <img width="538" alt="23 edit web dot php file" src="https://user-images.githubusercontent.com/83463641/198120675-a6f6d903-e388-43d1-bcb1-aafc3cd070d6.PNG">
 
-##### l. Migrate the Database
+##### m. Migrate the Database
 ```
 composer create-project
 ```
@@ -416,11 +416,11 @@ php artisan migrate --seed
 ```
 <img width="940" alt="26 php artisan migrate seed" src="https://user-images.githubusercontent.com/83463641/198129726-5e0b3970-26d6-4e31-8dad-067ce3c1e489.PNG">
 
-##### m. Restart the Apache web server using: 
+##### n. Restart the Apache web server using: 
 ```
 systemctl restart apache2
 ```
-##### n. Refresh domain name page to display the Laravel Page: osinachiuro.me
+##### o. Refresh domain name page to display the Laravel Page: osinachiuro.me
 
 <img width="620" alt="28 Laravel Loading with my domain name" src="https://user-images.githubusercontent.com/83463641/198134402-3f216aeb-ba41-48bb-8e56-b4a0deaa8959.PNG">
 
@@ -460,7 +460,7 @@ snap install --classic certbot
 ```
 ln -s /snap/bin/certbot /usr/bin/certbot
 ```
-##### Create an A record in Digital Ocean for the www domain you will use for the next script
+* Create an A record in Digital Ocean for the www domain you will use for the next script
 
 ```
 certbot --apache --agree-tos --redirect -m youremail@email.com -d domainname.com -d www.domainname.com
