@@ -507,4 +507,9 @@ nano /var/www/html/laravel/.htaccess
 ---
 #### Next is Endpoint testing using browser and Postman. Checck the page: [API Endpoints Testing](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Exercise%2010/API%20Endpoints%20Testing.md)
 
+---
+
+** Speacial Appreciation to [Cloud Booklet](https://www.cloudbooklet.com) for the great article on [How to Install LAMP Apache, MySQL, PHP on Debian 11](https://www.cloudbooklet.com/how-to-install-lamp-apache-mysql-php-on-debian-11/) **
+
+
 #### The End
