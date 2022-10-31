@@ -14,7 +14,7 @@
 ---
 ## Steps
 
-### 1. Register a domain name if yu dont already have one
+### 1. Register a domain name if you don't already have one
 * I used namecheap to register a domain called. Here is my [Domain](https://osinachiuro.me)
 ---
 
