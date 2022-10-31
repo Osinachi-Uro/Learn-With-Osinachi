@@ -41,7 +41,7 @@ vagrant ssh
 
 #### Step 3: In server 'unwara', install all the required dependency, in this case python3.
 ```
-sudo apt install python3
+sudo apt install -y software-properties-common python-apt
 ```
 <img width="770" alt="1 Install Ansible dependencies" src="https://user-images.githubusercontent.com/83463641/195210123-5f991dbe-894b-4f3f-a7eb-37267478731f.PNG">
 
