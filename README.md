@@ -1,9 +1,11 @@
-# AltSchool-Cloud-Exercises
+# AltSchool 2nd Semester - Cloud-Exercises and Exam
 I have created this repository to document my learning progress in the AltSchool Cloud Engineering Program, 2022.
 
 In the repository, i created folders for each exercise given by the instructor, Mr Abbakar Siddig Ango from the LMS Cloud Engineering Classes.
 
 Each exercice folder is serially numbered starting from Exercise 1 to 10 Below is a list of each exercise folder and content names based on the title of the topic learnt.
+
+There is also a folder containing containg the second semester exam solution
 
 ## List and topic of each Exercise Folder
 
@@ -17,4 +19,5 @@ Each exercice folder is serially numbered starting from Exercise 1 to 10 Below i
 ### Exercise 8: Configuration Management - Ansible
 ### Exercise 9: IP Adressing - Net Masking
 ### Exercise 10: Mini Project to Deploying a realworld laravel project using LAMP on Debian
+### Second Semester Examination
 
