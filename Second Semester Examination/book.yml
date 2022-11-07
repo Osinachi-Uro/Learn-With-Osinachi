@@ -1,0 +1,385 @@
+---
+- name: Setup Web Server
+  hosts: all
+  become: true
+  become_method: sudo
+
+
+
+  tasks:
+
+  - name: update "apt"
+    apt:
+      update_cache: yes
+      autoclean: yes
+      autoremove: yes
+    tags: update
+  
+  - name: Install Apache Server
+    apt:
+       name: apache2
+       state: present
+
+  - name: set timezone to Africa/Lagos
+    timezone:
+      name: Africa/Lagos
+
+  - name: Install Git
+    apt:
+       name: git
+       state: present
+
+  - name: Install curl
+    apt:
+       name: curl
+       state: present
+
+  - name: Install Software Properties
+    apt:
+       name: software-properties-common
+       state: present
+
+  - name: Install ufw
+    apt:
+       name: ufw
+       state: present
+
+  - name: Allow HTTP
+    ufw:
+       rule: allow
+       port: "80"
+       proto: tcp
+    tags: firewall
+
+  - name: Allow HTTPS
+    ufw:
+       rule: allow
+       port: "443"
+       proto: tcp
+    tags: firewall      
+
+  - name: Allow SSH
+    ufw:
+       rule: allow
+       port: "22"
+       proto: tcp
+    tags: firewall
+
+  - name: Allow MySQL
+    ufw: 
+       rule: allow
+       port: "3306"
+       proto: tcp
+    tags: firewall
+
+  - name: Install unzip
+    apt:
+       name: unzip
+       state: present
+
+  - name: Install wget
+    apt:
+       name: wget
+       state: present
+
+  - name: Installing Mysql  and dependencies
+    package:
+       name: "{{item}}"
+       state: present
+       update_cache: yes
+    loop:
+       - mysql-server
+       - mysql-client 
+       - python3-mysqldb
+       - libmysqlclient-dev
+    become: yes
+    tags: mysql 
+
+  - name: Start the MySQL service
+    service:
+        name: mysql
+        state: started
+        enabled: yes
+    tags: mysql
+     
+  - name: create mysql user
+    mysql_user:
+        name: exam
+        password: 12345
+        priv: '*.*:ALL'
+        host: '%'
+        state: present
+    tags: mysql
+
+  - name: Create Database
+    mysql_db:
+        name: exam
+        state: present
+    tags: mysql
+
+  - name: Enable remote login to mysql
+    lineinfile:
+         path: /etc/mysql/mysql.conf.d/mysqld.cnf
+         regexp: '^bind-address'
+         line: 'bind-address = 0.0.0.0'
+         backup: yes
+    tags: mysql
+
+  - name: Restart mysql
+    service:
+        name: mysql
+        state: restarted
+    tags: mysql
+
+  - name: update "apt"
+    apt:
+      update_cache: yes
+      autoclean: yes
+      autoremove: yes
+    tags: update  
+ 
+  - name: Install php repo
+    apt_repository:
+        repo="ppa:ondrej/php"
+    tags: php_repo
+
+  - name: Install PHP
+    apt:
+      name: php8.1
+      state: present
+    tags: php
+
+  - name: Install php dependencies
+    apt:
+      pkg:
+        - libapache2-mod-php 
+        - php8.1-mysql 
+        - php8.1-common 
+        - php8.1-xml 
+        - php8.1-xmlrpc 
+        - php8.1-curl 
+        - php8.1-gd 
+        - php8.1-imagick 
+        - php8.1-cli 
+        - php8.1-dev 
+        - php8.1-imap 
+        - php8.1-mbstring 
+        - php8.1-opcache 
+        - php8.1-soap 
+        - php8.1-zip 
+        - php8.1-intl
+        - php8.1-bcmath
+        - php-json
+        - php-fpm
+        - php-tokenizer
+      state: present
+    tags: php_dep  
+
+  - name: Download Composer Installer
+    get_url:
+        url: https://getcomposer.org/installer
+        dest: /tmp/composer
+    tags: comp_download
+
+  - name: install composer
+    shell: php /tmp/composer --install-dir=/usr/local/bin
+    become: yes
+    tags: comp_install
+
+  - name: make composer executable
+    shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
+    become: yes
+    tags: comp_exec
+
+  - name: grant permissions for composer file
+    file:
+        path: /usr/local/bin/composer
+        mode: a+x
+        state: file
+    become: yes
+    tags: comp_perm
+  
+  - name: clone laravel repo
+    git:
+       repo: https://github.com/f1amy/laravel-realworld-example-app.git
+       dest: /var/www/html/laravel
+    become: yes
+    tags: clone
+
+  - name: copy the env file
+    copy:
+        src: /var/www/html/laravel/.env.example
+        remote_src: yes
+        dest: /var/www/html/laravel/.env
+    tags: env
+
+  - name: Change permissions, ownership laravel app folder
+    ansible.builtin.file:
+        path: /var/www/html/laravel
+        state: directory
+        owner: www-data
+        group: www-data
+        recurse: yes        
+        mode: '775'
+    tags: permission    
+  
+  - name: update "apt"
+    apt:
+      update_cache: yes
+      autoclean: yes
+      autoremove: yes
+    tags: update2
+
+  - name: Download and install all requirements
+    shell: composer create-project --no-interaction
+    args:
+        chdir: /var/www/html/laravel
+    tags: composer_install
+
+  - name: setup laravel key
+    shell: |
+        cd /var/www/html/laravel
+        php artisan key:generate
+    become: yes
+    tags: key
+
+  - name: Edit .env file app url
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'localhost' 
+      line: 'APP_URL=http://osinachiuro.me'
+      state: present
+    tags: edit_env
+
+  - name: Edit .env file dbconnection
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_CONNECTION'
+      line: 'DB_CONNECTION=mysql'
+      state: present
+    tags: edit_env
+
+  - name: Edit .env file dbhost     
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_HOST'
+      line: 'DB_HOST=localhost'
+      state: present
+    tags: edit_env
+
+  - name: edit .env file dbport
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_PORT'
+      line: 'DB_PORT=3306'
+      state: present
+    tags: edit_env
+
+  - name: edit .env file database
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_DATABASE'
+      line: 'DB_DATABASE=exam'   
+      state: present
+    tags: edit_env
+
+  - name: edit .env file dbusername   
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_USERNAME'
+      line: 'DB_USERNAME=exam'
+      state: present
+    tags: edit_env
+
+  - name: edit .env file dbpassword
+    ansible.builtin.lineinfile:
+      path: /var/www/html/laravel/.env
+      regexp: 'DB_PASSWORD'
+      line: 'DB_PASSWORD=12345'
+      state: present
+    tags: edit_envv
+
+  - name: migrate db
+    shell: |
+        cd /var/www/html/laravel
+        php artisan migrate --seed
+    become: yes
+    tags: seed
+
+  - name: setup laravel config cache
+    shell: |
+        cd /var/www/html/laravel/        
+        php artisan config:cache
+    become: yes
+    tags: lara
+
+  - name: Create the Virtual Host Configuration File
+    copy:
+       dest: /etc/apache2/sites-available/laravel.conf
+       content:
+          <VirtualHost *:80>
+              ServerAdmin admin@osinachiuro.me
+              ServerName osinachiuro.me
+              ServerAlias www.osinachiuro.me
+
+              DocumentRoot /var/www/html/laravel
+
+              <Directory /var/www/html/laravel>
+                  Options Indexes FollowSymLinks
+                  AllowOverride All
+                  Require all granted
+              </Directory>
+
+              ErrorLog ${APACHE_LOG_DIR}/error.log
+              CustomLog ${APACHE_LOG_DIR}/access.log combined
+          </VirtualHost>
+    tags: laravel_conf
+
+  - name: set configuration file permission
+    file:
+        path: /etc/apache2/sites-available/laravel.conf
+        state: file
+        mode: '644'
+    become: yes
+    tags: conf
+
+  - name: enable the new config
+    shell: |
+        a2ensite laravel.conf
+        a2dissite 000-default.conf
+        a2enmod rewrite
+    become: yes
+    tags: go
+
+  - name: restart apache 2
+    service:
+       name: apache2
+       state: restarted
+
+  - name: Install snapd
+    apt:
+      name:
+        - snapd
+      state: present
+
+  - name: Install core
+    shell: snap install core
+
+  - name: refresh core
+    shell: snap refresh core
+
+  - name: Install certbot tool
+    shell: snap install --classic certbot
+  
+  - name: Configure certbot
+    shell: ln -s /snap/bin/certbot /usr/bin/certbot
+
+  - name: redirect certbot
+    shell: certbot --apache --agree-tos --redirect -m admin@osinachiuro.me -d osinachiuro.me -d www.osinachiuro.me
+    ignore_errors: yes
+
+  - name: install postgresql
+    script: /home/vagrant/ansible/pgresql.sh
+    args:
+      chdir: /root/
+    tags: postgresql
