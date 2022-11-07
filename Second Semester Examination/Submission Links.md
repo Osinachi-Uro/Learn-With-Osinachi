@@ -1,7 +1,7 @@
 ## AltSchool Africa Second Semester Exam Submission Links
 
 #### 1. Here is my Domain name
-[Domain Name](www.osinachiuro.me)
+www.osinachiuro.me
 
 #### 2. Link to Digital Ocean Team Invitation
 [Cloud Credentials](https://cloud.digitalocean.com/account/team?i=6243df&sort=created_at&sort_direction=desc)
