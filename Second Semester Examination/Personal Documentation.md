@@ -54,7 +54,7 @@ ansible-playbook book.yml -i inventory -u root --tags php_dep
 ansible-playbook book.yml -i inventory -u root --start-at-task="setup laravel config cache"
 ```
 #### 4. Create a Bash Script to install Postgresql via Ansible
-Here is my [Bash Script]()
+Here is my [Bash Script](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/pgresql.sh)
 
 * Bash script execited and Postgresql installed successfully
 
