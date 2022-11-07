@@ -1,7 +1,16 @@
-**Note:** 
-I used an Ubuntu 22.04 (LTS) x64 as my Linux distro of choice.
+### My Personal documention of the steps I took to achieve the exam requirements
 
-I created one playbook [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+**Summary** 
+
+* I used an Ubuntu 22.04 (LTS) x64 as my Linux distro of choice.
+
+* I created one [Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+
+* I created a [Bash Script](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/pgresql.sh) to install Postgresql
+
+* My Domain name is www.osinachiuro.me
+
+---
 
 #### Step 1: Set up a local Vagrant Machine and installed the following:
 
@@ -19,21 +28,23 @@ ansible --version
 ```
 <img width="708" alt="3  Confirm ansible is installed" src="https://user-images.githubusercontent.com/83463641/199501709-add3fc98-8b5f-4378-a226-3c8b24df5fa7.PNG">
 
-Set up SSH connection for the remote server using 
+* Set up SSH connection for the remote server using 
 ```
 ssh keygen
 ```
 <img width="530" alt="4  Create ssh key and copy key into droplet while creating" src="https://user-images.githubusercontent.com/83463641/200427641-3d987357-4184-4a8f-b551-ec0cb7cb018b.PNG">
 
 #### Step 2: Create a Droplet on Digital Ocean using the public key from the local server and link it with my existing domain name
-Establish a connection between the two servers by running 
+
+* Establish a connection between the two servers by running 
+
 ```
 vagrant root@ServerIP
 ```
 <img width="467" alt="5a connection successful" src="https://user-images.githubusercontent.com/83463641/200431789-3c8133b4-786c-4248-ab9e-bcdb57bad388.PNG">
 
 #### Step 3: Create an ansible playbook with all the tasks required to execute the project. 
-Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+* Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 * To check connectivity of ansible to the remote server i used the following commands:
 ```
