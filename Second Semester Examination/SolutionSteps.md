@@ -1,7 +1,7 @@
 **Note:** 
 I used an Ubuntu 22.04 (LTS) x64 as my Linux distro of choice.
 
-I created one playbook [My Playbook] (https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+I created one playbook [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 #### Step 1: Create a Droplet on Digital Ocean and link it with my existing domain name
 
@@ -21,7 +21,7 @@ ansible --version
 ```
 <img width="708" alt="3  Confirm ansible is installed" src="https://user-images.githubusercontent.com/83463641/199501709-add3fc98-8b5f-4378-a226-3c8b24df5fa7.PNG">
 
-Create an ansible playbook with all the tasks required to execute the project. Here is a link to [My Playbook] (https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+Create an ansible playbook with all the tasks required to execute the project. Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 * To check connectivity of ansible to the remote server i used the following commands:
 ```
