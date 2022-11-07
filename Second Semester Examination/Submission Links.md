@@ -7,7 +7,7 @@
 [Cloud Credentials](https://cloud.digitalocean.com/account/team?i=6243df&sort=created_at&sort_direction=desc)
 
 #### A link to my playbook file
-[Playbook]()
+[Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 #### A link to my Postgresql Installation file
 [Postgresql Bash Script]()
