@@ -10,4 +10,4 @@
 [Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 #### A link to my Postgresql Installation file
-[Postgresql Bash Script]()
+[Postgresql Bash Script](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/pgresql.sh)
