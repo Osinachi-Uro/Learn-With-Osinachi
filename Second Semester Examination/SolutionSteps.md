@@ -19,22 +19,23 @@ ansible --version
 ```
 <img width="708" alt="3  Confirm ansible is installed" src="https://user-images.githubusercontent.com/83463641/199501709-add3fc98-8b5f-4378-a226-3c8b24df5fa7.PNG">
 
-To connect ansible to the remote server
+Create an ansible playbook with all the tasks required to execute the project. Here is a link to [My Playbook] ()
+
+* To check connectivity of ansible to the remote server i used the following commands:
 ```
 ansible webserver -i inventory -m ping -u root
 ```
+
+* To run my ansible playbook i used the following command
 ```
  ansible-playbook book.yml -i inventory -u root --check
 ```
-* Install Apache
-```
-
-```
-
-* Install php 
-```
-
-```
+* To run a task or group of tasks, i assigned tags to them and ran them as follows:
 ```
 ansible-playbook book.yml -i inventory -u root --tags php_dep
 ```
+* To run a particular task only, i used the name of the task and ran it as follows:
+```
+ansible-playbook book.yml -i inventory -u root --start-at-task="setup laravel config cache"
+```
+### 
