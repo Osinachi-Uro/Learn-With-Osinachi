@@ -30,8 +30,10 @@ Establish a connection between the two servers by running
 ```
 vagrant root@ServerIP
 ```
+<img width="467" alt="5a connection successful" src="https://user-images.githubusercontent.com/83463641/200431789-3c8133b4-786c-4248-ab9e-bcdb57bad388.PNG">
 
-Create an ansible playbook with all the tasks required to execute the project. Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+#### Step 3: Create an ansible playbook with all the tasks required to execute the project. 
+Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
 
 * To check connectivity of ansible to the remote server i used the following commands:
 ```
@@ -51,4 +53,9 @@ ansible-playbook book.yml -i inventory -u root --tags php_dep
 ```
 ansible-playbook book.yml -i inventory -u root --start-at-task="setup laravel config cache"
 ```
-### 
+#### 4. Create a Bash Script to install Postgresql via Ansible
+Here is my [Bash Script]()
+
+* Bash script execited and Postgresql installed successfully
+
+<img width="685" alt="Postgresql" src="https://user-images.githubusercontent.com/83463641/200432255-551eb6ac-d73a-4024-9b44-7068a384e813.PNG">
