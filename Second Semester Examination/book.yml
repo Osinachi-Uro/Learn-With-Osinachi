@@ -234,6 +234,7 @@
     shell: composer create-project --no-interaction
     args:
         chdir: /var/www/html/laravel
+    become: yes
     tags: composer_install
 
   - name: setup laravel key
