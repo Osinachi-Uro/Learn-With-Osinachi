@@ -513,3 +513,8 @@ nano /var/www/html/laravel/.htaccess
 
 
 #### The End
+
+
+![order 3](https://user-images.githubusercontent.com/83463641/210149023-ca23a265-bb79-4529-a5d4-7049a9397b99.JPG)
+
+![Capture](https://user-images.githubusercontent.com/83463641/210149067-b3b75499-d984-4645-b73f-1b00620c58d6.PNG)
