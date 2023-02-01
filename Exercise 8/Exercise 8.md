@@ -119,7 +119,7 @@ nano book.yml
 * Write the playbook instruction and close., the we test our inventory, to see if ansible is having a connection with the server and the inventory file.
 
 ```
-ansible all -i inventory -m ping  
+ansible all -i inventory -m ping
 ```
 **Note**: "inventory' is the name of your host inventory file
 
