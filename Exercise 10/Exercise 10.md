@@ -398,6 +398,8 @@ cp .env.example .env
 nano .env
 ```
 
+<img width="740" alt="25 Edit the  env file" src="https://user-images.githubusercontent.com/83463641/216946245-502f4992-28c4-4345-9d1b-08732d435088.PNG">
+
 ##### j. Enable Module Rewrite on Apache2 and restart Apache2:
 
 ```
