@@ -13,7 +13,7 @@ Once the machine is up, run ifconfig and share the output in your submission alo
 
 ## A. INSTALLING VIRTUAL BOX
 1. I downloded virtual box for Windows host (which is my OS) from [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
-2. Ran the download and complted the installation following the guided GUI.
+2. I ran the download and completed the installation following the guided GUI.
 
 
 ## B. CREATING A NEW UBUNTU MACHINE FROM INSTALLED VIRTUAL BOX
