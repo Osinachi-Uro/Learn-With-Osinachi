@@ -1,4 +1,4 @@
-### My Personal documention of the steps I took to achieve the exam requirements
+### My Personal documention of the steps I took to achieve the Exercise 12
 
 **Summary** 
 

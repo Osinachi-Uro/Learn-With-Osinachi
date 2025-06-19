@@ -1,5 +1,5 @@
-## Exam Question
-You are required to deploy the same Laravel application from your mini project. This
+## Question
+You are required to deploy the same Laravel application from your Exercise 10. This
 time, the entire deployment steps including installation of packages and dependencies,
 configuring your apache webserver etc, will be defined in an ansible playbook and
 deployed to atleast one ansible slave.
@@ -24,8 +24,8 @@ script would be run on your ansible slaves using an ansible playbook.
 
 - Push your code to GitHub
 
-- Share your github link on the shared document.
+- Share your github link.
 
-- Share your cloud credentials.
+- Share a cloud console screenshot of your deployements.
 
-**Note** you can create IAM users for your instructors with the least privilege but enough to view your instances, the firewall rules set on your instance and any logical network if set. If this would require sharing your ssh keys, please do so privately.
+**Note** you can create IAM users for your reviewer with the least privilege but enough to view your instances, the firewall rules set on your instance and any logical network if set. If this would require sharing your ssh keys, please do so privately.
