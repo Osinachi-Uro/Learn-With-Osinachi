@@ -19,5 +19,5 @@ Each exercise folder is serially numbered, starting from Exercise 1 to n. Below 
 ### Exercise 9: IP Addressing - Net Masking
 ### Exercise 10: How to Deploy a real-world Laravel project using LAMP on Debian
 ### Exercise 11: Deploy a random app on AWS EC2 instances behind an Elastic load balancer running Nginx Web server
-### Exercise 12:
+### Exercise 12: Deploy the same Laravel application from your Exercise 10 using Ansible Playbook
 
