@@ -2,11 +2,11 @@
 
 ## Task:
 
-You already have Github account, also setup a GitLab account if you don’t have one already.
+You already have a GitHub account. Also, set up a GitLab account if you don’t have one already.
 
-You already have an altschool-cloud-exercises projectrepo, clone the project to your local system.
+Create a repo, maybe personal project repo and clone that project to your local system.
 
-Setup your name and email in Git’s global config.
+Set up your name and email in Git’s global config.
 
 ## Instruction:
 
