@@ -6,7 +6,7 @@ In the repository, I created folders for each exercise I completed.
 
 Each exercise folder is serially numbered, starting from Exercise 1 to n. Below is a list of each exercise folder and its content, named based on the title of the topic learned.
 
-## List and Topic of each Exercise Folder
+## Content of each Learning Exercise Folder
 
 ### Exercise 1: Setting Up the Linux Operating System on your Windows machine
 ### Exercise 2: 10 Linux commands and their use cases
