@@ -1,10 +1,10 @@
 # Learn With Me
 
-I created this repository to document my learning progress. I hope it helps you too, as you progress in your journey.
+I created this repository to document my progress in learning. I hope it helps you too, as you progress in your journey.
 
 In the repository, I created folders for each exercise I completed.
 
-Each exercise folder is serially numbered, starting from Exercise 1 to n. Below is a list of each exercise folder and its content, named based on the title of the topic learned.
+Each exercise folder is serially numbered, starting with Exercise 1 and proceeding to Exercise n. Below is a list of each exercise folder and its content, named based on the title of the topic learned.
 
 ## Content of each Learning Exercise Folder
 
@@ -20,4 +20,4 @@ Each exercise folder is serially numbered, starting from Exercise 1 to n. Below 
 ### Exercise 10: How to Deploy a real-world Laravel project using LAMP on Debian
 ### Exercise 11: Deploy a random app on AWS EC2 instances behind an Elastic load balancer running Nginx Web server
 ### Exercise 12: Deploy the same Laravel application from your Exercise 10 using Ansible Playbook
-
+### Exercise 13: Deploy-and-Scale-Ethereum-Node-and-DApp-on-Kubernetes
