@@ -4,9 +4,9 @@
 
 * I used an Ubuntu 22.04 (LTS) x64 as my Linux distro of choice.
 
-* I created one [Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+* I created one [Playbook](https://github.com/Osinachi-Uro/Learn-With-Osinachi/blob/main/Second%20Semester%20Examination/book.yml)
 
-* I created a [Bash Script](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/pgresql.sh) to install Postgresql
+* I created a [Bash Script](https://github.com/Osinachi-Uro/Learn-With-Osinachi/blob/main/Second%20Semester%20Examination/pgresql.sh) to install Postgresql
 
 * My Domain name is www.osinachiuro.me
 
@@ -44,7 +44,7 @@ vagrant root@ServerIP
 <img width="467" alt="5a connection successful" src="https://user-images.githubusercontent.com/83463641/200431789-3c8133b4-786c-4248-ab9e-bcdb57bad388.PNG">
 
 #### Step 3: Create an ansible playbook with all the tasks required to execute the project. 
-* Here is a link to [My Playbook](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/book.yml)
+* Here is a link to [My Playbook](https://github.com/Osinachi-Uro/Learn-With-Osinachi/blob/main/Second%20Semester%20Examination/book.yml)
 
 * To check connectivity of ansible to the remote server i used the following commands:
 ```
@@ -65,7 +65,7 @@ ansible-playbook book.yml -i inventory -u root --tags php_dep
 ansible-playbook book.yml -i inventory -u root --start-at-task="setup laravel config cache"
 ```
 #### 4. Create a Bash Script to install Postgresql via Ansible
-Here is my [Bash Script](https://github.com/Osinachi-Uro/AltSchool-Cloud-Exercises/blob/main/Second%20Semester%20Examination/pgresql.sh)
+Here is my [Bash Script](https://github.com/Osinachi-Uro/Learn-With-Osinachi/blob/main/Second%20Semester%20Examination/pgresql.sh)
 
 * Bash script execited and Postgresql installed successfully
 
